@@ -17,15 +17,15 @@ public:
 
     void draw();
 
-    void addShape(std::shared_ptr<Shape> shape);
+    void addShape(const std::shared_ptr<Shape>& shape);
 
     void removeLastShape();
 
     void clear();
 
-    void save(std::string filePath) const;
+    void save(const std::string& filePath) const;
 
-    [[nodiscard]] bool load(std::string filepath);
+    [[nodiscard]] bool load(const std::string& filepath);
 
     void listShapes() const;
 
