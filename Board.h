@@ -15,7 +15,7 @@ private:
 public:
     Board();
 
-    void draw() const;
+    void draw();
 
     void addShape(std::shared_ptr<Shape> shape);
 
