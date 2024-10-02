@@ -6,8 +6,11 @@
 
 
 #include <string>
+#include "Board.h"
 
 class Application {
+private:
+    Board board;
 public:
     void executeCommand(const std::string &commandLine);
 };
