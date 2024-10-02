@@ -13,6 +13,8 @@ private:
     std::vector<std::vector<char>> grid;
     std::vector<std::shared_ptr<Shape>> shapes;
 public:
+    Board();
+
     void draw() const;
 
     void addShape(std::shared_ptr<Shape> shape);
