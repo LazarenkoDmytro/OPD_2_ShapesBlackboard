@@ -6,5 +6,6 @@
 
 
 class Board {
-
+public:
+    void setPixel(int x, int y, char c);
 };
