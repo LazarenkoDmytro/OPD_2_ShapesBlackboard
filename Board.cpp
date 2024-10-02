@@ -35,9 +35,9 @@ void Board::addShape(const std::shared_ptr<Shape> &shape) {
             std::cout << "Shape already exists" << std::endl;
             return;
         }
-
-        shapes.push_back(shape);
     }
+
+    shapes.push_back(shape);
 }
 
 void Board::removeLastShape() {
@@ -89,7 +89,7 @@ bool Board::load(const std::string &filepath) {
 
 void Board::listShapes() const {
     for (const auto &shape: shapes) {
-        std::cout << "ID: " << shape->getID() << ": " << shape->getInfo() << std::endl;
+        std::cout << "ID " << shape->getID() << ": " << shape->getInfo() << std::endl;
     }
 }
 
