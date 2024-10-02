@@ -6,7 +6,8 @@
 
 
 #include <vector>
-#include "Shape.h"
+
+class Shape;
 
 class Board {
 private:

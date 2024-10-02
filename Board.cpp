@@ -4,6 +4,7 @@
 
 #include <fstream>
 #include "Board.h"
+#include "Shape.h"
 
 const int BOARD_WIDTH = 80;
 const int BOARD_HEIGHT = 25;
