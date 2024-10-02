@@ -1,0 +1,83 @@
+@startuml
+
+abstract class Shape {
+    + id;
+    + getID(): int
+    + draw(Board &board): void
+    + isEqual(shared_ptr<Shape> other): bool
+    + getInfo(): string
+    + save(ostream &out): void
+    {static} + load(istream &in): shared_ptr<Shape>
+}
+
+class Circle {
+    - x: int
+    - y: int
+    - radius: int
+    + getID(): int
+    + draw(Board &board): void
+    + isEqual(shared_ptr<Shape> other): bool
+    + getInfo(): string
+    + save(ostream &out): void
+    {static} + load(istream &in): shared_ptr<Shape>
+}
+
+class Rectangle {
+    - x: int
+    - y: int
+    - width: int
+    - height: int
+    + getID(): int
+    + draw(Board &board): void
+    + isEqual(shared_ptr<Shape> other): bool
+    + getInfo(): string
+    + save(ostream &out): void
+    {static} + load(istream &in): shared_ptr<Shape>
+}
+
+class Triangle {
+    - x1: int
+    - y1: int
+    - x2: int
+    - y2: int
+    - x3: int
+    - y3: int
+    + getID(): int
+    + draw(Board &board): void
+    + isEqual(shared_ptr<Shape> other): bool
+    + getInfo(): string
+    + save(ostream &out): void
+    {static} + load(istream &in): shared_ptr<Shape>
+}
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+Shape <|-- Triangle
+
+class Board {
+    - grid: char[][]
+    - shapes: List<Shape*>
+    + draw(): void
+    + addShape(Shape*): void
+    + removeLastShape(): void
+    + clear(): void
+    + save(filePath: string): void
+    + load(filePath: string): bool
+    + listShapes(): void
+    + setPixel(int x, int y, char c): void
+    + drawLine(int x1, int y1, int x2, int y2): void
+}
+
+class Application {
+    - board: Board
+    + executeCommand(commandLine: string): void
+}
+
+class CLI {
+    - app: Application
+    + run(): void
+}
+
+CLI --> Application
+
+@enduml
