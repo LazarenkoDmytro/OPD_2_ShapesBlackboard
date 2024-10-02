@@ -5,6 +5,9 @@
 #pragma once
 
 
-class Application {
+#include <string>
 
+class Application {
+public:
+    void executeCommand(const std::string &commandLine);
 };
