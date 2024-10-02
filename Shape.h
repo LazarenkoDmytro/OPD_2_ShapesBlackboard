@@ -18,7 +18,7 @@ public:
 
     virtual ~Shape();
 
-    [[nodiscard]] virtual int getId() const;
+    [[nodiscard]] virtual int getID() const;
 
     virtual void draw(Board &board) const = 0;
 

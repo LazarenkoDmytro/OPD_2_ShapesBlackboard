@@ -15,7 +15,7 @@ Shape::Shape() {
 
 Shape::~Shape() = default;
 
-int Shape::getId() const {
+int Shape::getID() const {
     return id;
 }
 
